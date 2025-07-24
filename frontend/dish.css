@@ -1,0 +1,101 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fffaf0;
+  margin: 0;
+  padding: 0;
+  color: #1c1c1c;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 25px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #d35400;
+  font-size: 2.8rem;
+  border-bottom: 4px solid #ff4500;
+  padding-bottom: 12px;
+  margin-bottom: 35px;
+}
+
+/* Hero Image */
+.dish-image {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+/* Section Headers */
+h2 {
+  color: #e74c3c;
+  font-size: 2rem;
+  border-left: 6px solid #ffb400;
+  padding-left: 12px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* List */
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Recipe Step */
+.step {
+  margin-top: 25px;
+  background: linear-gradient(to right, #fff3e0, #ffe0b2);
+  padding: 20px;
+  border-left: 8px solid #ff5722;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.step:hover {
+  background: linear-gradient(to right, #ffe0b2, #ffc107);
+  transform: translateY(-2px);
+}
+
+.step img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .step {
+    padding: 16px;
+  }
+}

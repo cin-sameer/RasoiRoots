@@ -1,0 +1,640 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Top bar */
+/* Top bar improvements */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #360802, #330e03);
+    padding: 12px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Logo Image */
+.logo-img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.1);
+}
+
+/* Search Bar */
+.searchBar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
+    order: 2;
+    padding-right: 100px;
+    
+}
+
+#searchForm {
+    display: flex;
+    width: 90%;
+    max-width: 500px;
+  
+}
+
+#searchinput {
+flex:auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    min-width: 150px;
+    background: #721205;
+    color:white
+    
+}
+
+#button {
+    padding: 10px 16px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+#button:hover {
+    background-color: #e64a19;
+}
+
+/* Top Buttons (right side) */
+.topButtons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    order: 3;
+}
+
+.topButtons button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.topButtons button:hover {
+    background-color: #641b05;
+    border-color: #ff5722;
+}
+
+/* 🔥 Mobile-friendly header tweaks */
+@media (max-width: 768px) {
+    .topBar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .searchBar {
+        order: 2;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #searchForm {
+        flex-direction: row;
+        width: 100%;
+    }
+
+  
+    .topButtons {
+        justify-content: center;
+        order: 3;
+        margin-top: 8px;
+        width: 100%;
+    }
+
+   #searchinput {
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#button {
+    border-radius: 0 0 6px 6px;}
+    
+}
+
+@media (max-width: 480px) {
+    #searchForm {
+    width: 100%;
+}
+
+.searchBar {
+    padding-right: 0;
+}
+
+     .logo {
+    gap: 6px;               /* a little tighter on mobile */
+  }
+  .logo .span {
+    display: inline-block;  /* or flex / block – any visible value */
+  }
+   #searchinput {
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#button {
+    border-radius: 0 0 6px 6px;
+    
+}
+
+    .topButtons button {
+     
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+main{
+    background-color: #fcd294;
+}
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #721205, #330e03);
+  color: white;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+.heroText {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heroText h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.heroText p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e63900;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ff5722;
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* 📱 Media Queries for Responsive Hero Section */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 40px 20px;
+  }
+
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroText {
+    max-width: 100%;
+  }
+
+  .heroText h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .heroImage {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .heroImage img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 30px 15px;
+  }
+
+  .heroText h1 {
+    font-size: 1.8rem;
+  }
+
+  .heroText p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* Explore Traditions Section */
+.exploreTradition {
+    text-align: center;
+    margin: 40px 10px;
+    padding: 0 10px;
+}
+
+.exploreTradition h2 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exploreTradition h2::before,
+.exploreTradition h2::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: #ff5722;
+    margin: 0 10px;
+}
+
+/* Cards Layout */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    
+    
+}
+
+.card {
+    background-color: #e6a168;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 8 8px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+
+  
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.exploreBtn {
+    display: block;
+    text-align: center;
+    padding: 8px 16px;
+    background-color: #f84008;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.exploreBtn:hover {
+    background-color: #e64a19;
+}
+
+/* All recipes container */
+.allRecipes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 14px;
+}
+
+.card-body h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #d35400;
+}
+
+.card-body p {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.explore-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+.explore-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer{
+    background-color: #360503;
+    color: white;
+    padding: 30px 15px 20px;
+ 
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .topBar {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .logo-img {
+        height: 30px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    #searchinput {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    #button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .topButtons button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .heroText h1 {
+        font-size: 2rem;
+    }
+
+    .heroImage {
+        padding: 0 10px;
+    }
+
+    .exploreTradition h2 {
+        font-size: 1.5rem;
+    }
+
+    .exploreTradition h2::before,
+    .exploreTradition h2::after {
+        width: 20px;
+    }
+
+    .cards, .card-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topBar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchBar {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #searchForm {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #searchinput, #button {
+        border-radius: 6px !important;
+    }
+
+    #button {
+        margin-top: 6px;
+    }
+
+    .topButtons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .heroText h1 {
+        font-size: 1.8rem;
+    }
+
+    .heroSection {
+        padding: 40px 15px;
+    }
+
+    .card img, .card-img {
+        height: 140px;
+    }
+
+    .card-body p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .explore-btn {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .logo-img {
+        height: 25px;
+    }
+
+    .logo span {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .topBar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .topButtons button {
+        flex: 1;
+    }
+}

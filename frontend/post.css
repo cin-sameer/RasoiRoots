@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff5e6; /* Light creamy background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-image: radial-gradient(circle at 10% 20%, rgba(255,186,104,0.2) 0%, rgba(255,186,104,0.1) 90%);
+}
+
+.container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(231, 76, 60, 0.15);
+  max-width: 500px;
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid #ffd8b6;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #e74c3c, #e67e22, #e74c3c);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #c0392b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #e74c3c, #f39c12);
+  border-radius: 3px;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="file"] {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffd8b6;
+  font-size: 1rem;
+  background-color: #fffaf5;
+  transition: all 0.3s;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #e74c3c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.colors label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  background-color: #fff5e6;
+  transition: all 0.2s;
+}
+
+.colors label:hover {
+  background-color: #ffe8cc;
+  transform: translateY(-2px);
+}
+
+.colors input[type="radio"] {
+  accent-color: #e74c3c;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e74c3c, #e67e22);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(231, 76, 60, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #c0392b, #d35400);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* Spicy decorative elements */
+.spice-decoration {
+  position: absolute;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.spice-1 {
+  top: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e74c3c"><path d="M12 2L4 12l8 10 8-10z"/></svg>');
+}
+
+.spice-2 {
+  bottom: -20px;
+  left: -20px;
+  width: 80px;
+  height: 80px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e67e22"><circle cx="12" cy="12" r="10"/></svg>');
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  input[type="text"],
+  textarea,
+  select,
+  input[type="file"] {
+    padding: 0.7rem 0.9rem;
+  }
+}

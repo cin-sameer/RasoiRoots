@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Recipe Post</title>
+  <link rel="stylesheet" href="post.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <form id="recipeForm" enctype="multipart/form-data">
+      <h2>🍲 Create a New Recipe Post</h2>
+      <input type="text" id="title" placeholder="Title" required />
+      <textarea id="ingredients" placeholder="Ingredients" required></textarea>
+      <textarea id="description" placeholder="Description" required></textarea>
+      <input type="file" id="image" accept="image/*" required />
+
+      <select id="category" name="category">
+        <option value="">-- Select Cuisine --</option>
+        <option value="sindhi">Sindhi</option>
+        <option value="punjabi">Punjabi</option>
+        <option value="south-indian">South Indian</option>
+        <option value="rajasthani">Rajasthani</option>
+      </select>
+
+     
+
+      <button type="submit" id="button">Post</button>
+    </form>
+
+    
+  </div>
+
+  <script src="post.js"></script>
+</body>
+</html>
