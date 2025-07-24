@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 
 
 // Database connection
-mongoose.connect("mongodb+srv://letsexplore:letsexplore123@cluster0.mw4f2sh.mongodb.net")
+mongoose.connect(" Your LIink ")
     .then(() => {
         console.log("Connected to MongoDB");
     })
