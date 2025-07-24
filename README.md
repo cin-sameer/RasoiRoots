@@ -24,6 +24,9 @@
     <li>Database: MongoDB</li>
   </ul>
 
+  <p><strong>Note:</strong> This project is still a work in progress. Features and design may continue to evolve.</p>
+
+
   <h2>🚀 Future Enhancements</h2>
   <ul>
     <li>User login and authentication</li>
